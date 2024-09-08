@@ -887,7 +887,7 @@ function UnitDef_Post(name, uDef)
 		end
 
 		if name == "cortrem" then
-			uDef.weapondefs.tremor_spread_fire.impulsefactor = 1.4
+			uDef.weapondefs.tremor_spread_fire.impulsefactor = 1
 		end
 			
 		if name == "armbrtha" then

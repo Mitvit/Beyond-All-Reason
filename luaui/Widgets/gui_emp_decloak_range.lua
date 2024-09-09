@@ -63,7 +63,7 @@ local chobbyInterface
 local isSpy = {}
 local isGremlin = {}
 for udid, ud in pairs(UnitDefs) do
-    if string.find(ud.name, 'spy') then
+    if string.find(ud.name, 'spy') or string.find(ud.name, 'armvader') or string.find(ud.name, 'corroach') or string.find(ud.name, 'corsktl') then
         local selfdBlastId = WeaponDefNames[lower(ud['selfDExplosion'])].id
         isSpy[udid] = {
             ud.decloakDistance,

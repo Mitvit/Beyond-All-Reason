@@ -202,7 +202,11 @@ GUIUnitSoundEffects = {
 		--BaseSoundMovementType = "",
 		BaseSoundWeaponType = "conalt-small",
 	},
-
+	armrespawn = {
+		BaseSoundSelectType = "arm-bld-select-large",
+		--BaseSoundMovementType = "",
+		BaseSoundWeaponType = "conalt-medium",
+	},
 	armnanotc2plat = {
 		BaseSoundSelectType = "arm-bld-select-large-water",
 		--BaseSoundMovementType = "",
@@ -1063,7 +1067,7 @@ GUIUnitSoundEffects = {
 		BaseSoundMovementType = "arm-shp-large-ok",
 		BaseSoundWeaponType = "plasma-medium-torpedo",
 	},
-	armcarry = {
+	armantiship = {
 		BaseSoundSelectType = "arm-shp-large-sel",
 		BaseSoundMovementType = "arm-shp-large-ok",
 		BaseSoundWeaponType = "radar-support",
@@ -1102,6 +1106,11 @@ GUIUnitSoundEffects = {
 		BaseSoundWeaponType = "radar",
 	},
 	armatlas = {
+		BaseSoundSelectType = "arm-air-transport-small-sel",
+		BaseSoundMovementType = "arm-air-transport-small-ok",
+		BaseSoundWeaponType = "transport-large",
+	},
+	armhvytrans = {
 		BaseSoundSelectType = "arm-air-transport-small-sel",
 		BaseSoundMovementType = "arm-air-transport-small-ok",
 		BaseSoundWeaponType = "transport-large",
@@ -1416,6 +1425,12 @@ GUIUnitSoundEffects = {
 	},
 	cornanotc2plat = {
 		BaseSoundSelectType = "arm-bld-select-small-water",
+		--BaseSoundMovementType = "",
+		BaseSoundWeaponType = "conalt-small",
+	},
+
+	correspawn = {
+		BaseSoundSelectType = "arm-bld-select-large",
 		--BaseSoundMovementType = "",
 		BaseSoundWeaponType = "conalt-small",
 	},
@@ -2303,7 +2318,7 @@ GUIUnitSoundEffects = {
 		BaseSoundMovementType = "cor-shp-large-ok",
 		BaseSoundWeaponType = "plasma-medium-torpedo",
 	},
-	corcarry = {
+	corantiship = {
 		BaseSoundSelectType = "cor-shp-large-sel",
 		BaseSoundMovementType = "cor-shp-large-ok",
 		BaseSoundWeaponType = "radar-support",
@@ -2347,6 +2362,11 @@ GUIUnitSoundEffects = {
 		BaseSoundWeaponType = "emp-laser",
 	},
 	corvalk = {
+		BaseSoundSelectType = "arm-air-transport-small-sel",
+		BaseSoundMovementType = "arm-air-transport-small-ok",
+		BaseSoundWeaponType = "transport-large",
+	},
+	corhvytrans = {
 		BaseSoundSelectType = "arm-air-transport-small-sel",
 		BaseSoundMovementType = "arm-air-transport-small-ok",
 		BaseSoundWeaponType = "transport-large",
@@ -2543,11 +2563,29 @@ GUIUnitSoundEffects = {
 		--BaseSoundMovementType = "",
 		BaseSoundWeaponType = "conalt-small",
 	},
+
+	legnanotcbase = {
+		BaseSoundSelectType = "arm-bld-select-large",
+		--BaseSoundMovementType = "",
+		BaseSoundWeaponType = "conalt-medium",
+	},
+
+	legnanotct2 = {
+		BaseSoundSelectType = "arm-bld-select-large",
+		--BaseSoundMovementType = "",
+		BaseSoundWeaponType = "conalt-medium",
+	},
 	
 	legnanotcplat = {
 		BaseSoundSelectType = "arm-bld-select-small-water",
 		--BaseSoundMovementType = "",
 		BaseSoundWeaponType = "conalt-small",
+	},
+
+	legnanotct2plat = {
+		BaseSoundSelectType = "arm-bld-select-small-water",
+		--BaseSoundMovementType = "",
+		BaseSoundWeaponType = "conalt-medium",
 	},
 
 	legwin = {
@@ -2645,12 +2683,37 @@ GUIUnitSoundEffects = {
 		--BaseSoundMovementType = "",
 		BaseSoundWeaponType = "arm-bld-storage-metal",
 	},
+	legestor = {
+		BaseSoundSelectType = "arm-bld-nrghum",
+		--BaseSoundMovementType = "",
+		BaseSoundWeaponType = "arm-bld-storage",
+	},
 	legeconv = {
 		BaseSoundSelectType = "arm-bld-metal",
 		--BaseSoundMovementType = "",
 		BaseSoundWeaponType = "arm-bld-metalmaker",
         BaseSoundActivate = "arm-bld-mm-activate",
         BaseSoundDeactivate = "arm-bld-mm-deactivate",
+	},
+	leggeo = {
+		BaseSoundSelectType = "arm-bld-select-medium",
+		--BaseSoundMovementType = "",
+		BaseSoundWeaponType = "arm-bld-geo",
+	},
+	legageo = {
+		BaseSoundSelectType = "arm-bld-select-large",
+		--BaseSoundMovementType = "",
+		BaseSoundWeaponType = "arm-bld-geo-t2-explo",
+	},
+	legrampart = {
+		BaseSoundSelectType = "arm-bld-select-large",
+		--BaseSoundMovementType = "",
+		BaseSoundWeaponType = "nuke-anti",
+	},
+	legabm = {
+		BaseSoundSelectType = "arm-bld-defense-action-t2",
+		--BaseSoundMovementType = "",
+		BaseSoundWeaponType = "nuke-anti",
 	},
 
 
@@ -2781,8 +2844,8 @@ GUIUnitSoundEffects = {
 		BaseSoundWeaponType = "fastemgalt-small",
 	},
 	leglob = {
-		BaseSoundSelectType = "cor-bot-small-sel",
-		BaseSoundMovementType = "cor-bot-small-ok",
+		BaseSoundSelectType = "leg-bot-small-sel",
+		BaseSoundMovementType = "leg-bot-small-ok",
 		BaseSoundWeaponType = "plasma-small",
 	},
 	legcen = {
@@ -2791,8 +2854,8 @@ GUIUnitSoundEffects = {
 		BaseSoundWeaponType = "plasma-medium",
 	},
 	legbal = {
-		BaseSoundSelectType = "cor-bot-small-sel",
-		BaseSoundMovementType = "cor-bot-small-ok",
+		BaseSoundSelectType = "leg-bot-medium-sel",
+		BaseSoundMovementType = "leg-bot-medium-ok",
 		BaseSoundWeaponType = "rocketalt-small",
 	},
 	legkark = {

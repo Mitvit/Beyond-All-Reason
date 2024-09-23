@@ -77,6 +77,44 @@ local function proposed_unit_reworksTweaks(name, uDef)
             uDef.buildoptions[7] = "corhvytrans"
 		end
 
+		if name == "armwin" then
+			uDef.metalcost = 40
+		end
+		if name == "corwin" then
+			uDef.metalcost = 43
+			uDef.health = 220
+		end
+		if name == "armtide" then
+			uDef.energycost = 200
+		end
+		if name == "armadvsolar" then
+			uDef.metalcost = 350
+		end
+		if name == "corcv" then
+			uDef.buildpower = 95
+		end
+		if name == "corck" then
+			uDef.buildpower = 85
+		end
+		if name == "cormuskrat" then
+			uDef.buildpower = 85
+		end
+		if name == "coracv" then
+			uDef.buildpower = 265
+		end
+		if name == "corack" then
+			uDef.buildpower = 190
+		end
+		if name == "coraca" then
+			uDef.buildpower = 105
+		end
+		if name == "corch" then
+			uDef.buildpower = 115
+		end
+		if name == "corexp" then
+			uDef.buildtime = 2900
+		end
+
 	return uDef
 end
 

@@ -115,6 +115,29 @@ local function proposed_unit_reworksTweaks(name, uDef)
 			uDef.buildtime = 2900
 		end
 
+		if name == "corgator" then
+			uDef.buildtime = 2200
+			uDef.sightdistance = 330
+		end
+		if name == "armflash" then
+			uDef.sightdistance = 350
+		end
+		if name == "armflea" then
+			uDef.metalcost = 20
+			uDef.energycost = 300
+			uDef.sightdistance = 500
+		end
+		if name == "armpw" then
+			uDef.metalcost = 54
+			uDef.energycost = 870
+			uDef.health = 370
+		end
+		if name == "corak" then
+			uDef.metalcost = 45
+			uDef.energycost = 750
+			uDef.health = 300
+		end
+
 	return uDef
 end
 

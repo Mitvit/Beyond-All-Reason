@@ -1,97 +1,4 @@
 local function proposed_unit_reworksTweaks(name, uDef)
-
-		if name == "corshiva" then
-			uDef.weapondefs.shiva_gun.impulsefactor = 1
-			uDef.weapondefs.shiva_rocket.impulsefactor = 1
-		end
-		if name == "cortrem" then
-			uDef.weapondefs.tremor_spread_fire.impulsefactor = 1.4
-		end
-			
-		if name == "armbrtha" then
-			uDef.weapondefs.lrpc.impulsefactor = 1
-		end
-				
-		if name == "corint" then
-			uDef.weapondefs.lrpc.impulsefactor = 1
-		end
-			
-		if name == "armvang" then
-			uDef.weapondefs.shocker_low.impulsefactor = 1
-			uDef.weapondefs.shocker_high.impulsefactor = 1
-		end
-			
-		if name == "armvulc" then
-			uDef.weapondefs.rflrpc.impulsefactor = 1
-		end
-			
-		if name == "corbuzz" then
-			uDef.weapondefs.rflrpc.impulsefactor = 1
-		end
-			
-		if name == "armfboy" then
-			uDef.weapondefs.arm_fatboy_notalaser.impulsefactor = 1
-		end
-			
-		if name == "corgol" then
-			uDef.weapondefs.cor_gol.impulsefactor = 1
-		end
-		if name == "armmav" then
-			uDef.weapondefs.armmav_weapon.impulsefactor = 1
-		end
-			
-		if name == "armsilo" then
-			uDef.weapondefs.nuclear_missile.impulsefactor = 1
-		end
-			
-		if name == "corsilo" then
-			uDef.weapondefs.crblmssl.impulsefactor = 1
-		end
-		if name == "cortron" then
-			uDef.weapondefs.cortron_weapon.impulsefactor = 1
-		end
-			
-		if name == "corcat" then
-			uDef.weapondefs.exp_heavyrocket.impulsefactor = 1
-		end
-			
-		if name == "corban" then
-			uDef.weapondefs.banisher.impulsefactor = 1
-		end
-			
-		if name == "corparrow" then
-			uDef.weapondefs.cor_parrow.impulsefactor = 1
-		end
-			
-		if name == "corvroc" then
-			uDef.weapondefs.cortruck_rocket.impulsefactor = 1
-		end
-			
-		if name == "armmerl" then
-			uDef.weapondefs.armtruck_rocket.impulsefactor = 1
-		end
-			
-		if name == "corhrk" then
-			uDef.weapondefs.corhrk_rocket.impulsefactor = 1
-		end
-			
-		if name == "cortoast" then
-			uDef.weapondefs.cortoast_gun.impulsefactor = 1
-		end
-			
-		if name == "armamb" then
-			uDef.weapondefs.armamb_gun.impulsefactor = 1
-		end
-		if name == "corpun" then
-			uDef.weapondefs.plasma.impulsefactor = 1
-		end
-			
-		if name == "armguard" then
-			uDef.weapondefs.plasma.impulsefactor = 1
-		end
-
-
-
 		if name == "armwin" then
 			uDef.metalcost = 40
 		end
@@ -159,7 +66,6 @@ local function proposed_unit_reworksTweaks(name, uDef)
 		if name == "armwar" then
 			uDef.weapondefs.armwar_laser.reloadtime = 1.05
 			uDef.weapondefs.armwar_laser.beamtime = 0.35
-
 		end
 
 	return uDef

@@ -32,8 +32,8 @@ return {
 		customparams = {
 			usebuildinggrounddecal = true,
 			buildinggrounddecaltype = "decals/legcluster_aoplane.dds",
-			buildinggrounddecalsizey = 1,
-			buildinggrounddecalsizex = 1,
+			buildinggrounddecalsizey = 8,
+			buildinggrounddecalsizex = 8,
 			buildinggrounddecaldecayspeed = 30,
 			unitgroup = 'weapon',
 			model_author = "ZephyrSkies",
@@ -116,7 +116,6 @@ return {
 				edgeeffectiveness = 0.4,
 				explosiongenerator = "custom:ministarfire-explosion",
 				gravityaffected = "true",
-				impulseboost = 0.123,
 				impulsefactor = 0.5,
 				name = "Long-Range g2g Cluster Plasma Cannon",
 				noselfdamage = true,
@@ -131,6 +130,7 @@ return {
 				weaponvelocity = 450,
 				customparams = {
 					cluster = true,
+					exclude_preaim = true,
 					number = 3,
 				},
 				damage = {
@@ -149,7 +149,6 @@ return {
 				edgeeffectiveness = 0.3,
 				explosiongenerator = "custom:ministarfire-explosion",
 				gravityaffected = "true",
-				impulseboost = 0.123,
 				impulsefactor = 0.5,
 				name = "Cluster Munitions",
 				noselfdamage = true,
@@ -179,7 +178,6 @@ return {
 				explosiongenerator = "custom:ministarfire-explosion",
 				gravityaffected = "true",
 				hightrajectory = 1,
-				impulseboost = 0.123,
 				impulsefactor = 0.5,
 				name = "High-Trajectory Long-Range g2g Cluster Plasma Cannon",
 				noselfdamage = true,
@@ -194,6 +192,7 @@ return {
 				weaponvelocity = 450,
 				customparams = {
 					cluster = true,
+					exclude_preaim = true,
 					number = 6,
 				},
 				damage = {

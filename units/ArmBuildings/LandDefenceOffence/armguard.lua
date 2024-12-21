@@ -116,8 +116,7 @@ return {
 				edgeeffectiveness = 0.4,
 				explosiongenerator = "custom:genericshellexplosion-medium",
 				gravityaffected = "true",
-				impulseboost = 0.123,
-				impulsefactor = 0.5,
+				impulsefactor = 0.8,
 				name = "Heavy g2g long range plasma cannon",
 				noselfdamage = true,
 				range = 1220,
@@ -133,6 +132,9 @@ return {
 					subs = 150,
 					vtol = 90,
 				},
+				customparams = {
+					exclude_preaim = true
+				}
 			},
 			plasma_high = {
 				accuracy = 75,
@@ -146,7 +148,6 @@ return {
 				explosiongenerator = "custom:genericshellexplosion-medium-bomb",
 				gravityaffected = "true",
 				hightrajectory = 1,
-				impulseboost = 0.123,
 				impulsefactor = 1.4,
 				name = "High-trajectory g2g long-range AoE plasma cannon",
 				noselfdamage = true,
@@ -164,6 +165,9 @@ return {
 					subs = 150,
 					vtol = 90,
 				},
+				customparams = {
+					exclude_preaim = true
+				}
 			},
 		},
 		weapons = {

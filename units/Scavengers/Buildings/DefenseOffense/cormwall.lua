@@ -175,7 +175,6 @@ return {
 				explosiongenerator = "custom:genericshellexplosion-catapult",
 				firestarter = 70,
 				flighttime = 3.2,
-				impulseboost = 0.123,
 				impulsefactor = 0.123,
 				metalpershot = 0,
 				model = "catapultmissile.s3o",
@@ -208,6 +207,9 @@ return {
 				damage = {
 					default = 450,
 				},
+				customparams = {
+					exclude_preaim = true
+				}
 			},
 		},
 		weapons = {

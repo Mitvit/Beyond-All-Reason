@@ -122,8 +122,7 @@ return {
 				gravityaffected = "true",
 				heightboostfactor = 2.8,
 				hightrajectory = 1,
-				impulseboost = 0.5,
-				impulsefactor = 0.5,
+				impulsefactor = 0.9,
 				name = "Heavy long-range g2g plasma cannon",
 				noselfdamage = true,
 				predictboost = 0.25,
@@ -142,6 +141,9 @@ return {
 					shields = 765,
 					subs = 500,
 				},
+				customparams = {
+					exclude_preaim = true
+				}
 			},
 			shocker_low = {
 				areaofeffect = 192,
@@ -157,8 +159,7 @@ return {
 				firetolerance = 5000,
 				gravityaffected = "true",
 				heightboostfactor = 2.8,
-				impulseboost = 0.5,
-				impulsefactor = 0.5,
+				impulsefactor = 0.9,
 				name = "Heavy long-range g2g plasma cannon",
 				noselfdamage = true,
 				predictboost = 0.25,
@@ -177,6 +178,9 @@ return {
 					shields = 765,
 					subs = 500,
 				},
+				customparams = {
+					exclude_preaim = true
+				}
 			},
 		},
 		weapons = {

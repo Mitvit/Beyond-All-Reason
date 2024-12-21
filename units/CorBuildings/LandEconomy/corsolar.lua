@@ -12,6 +12,7 @@ return {
 		damagemodifier = 0.5,
 		energycost = 0,
 		energystorage = 50,
+		-- negative energyupkeep means it's conditional so when unit is off won't produce
 		energyupkeep = -20,
 		explodeas = "smallBuildingexplosiongeneric",
 		footprintx = 5,
@@ -30,7 +31,7 @@ return {
 		seismicsignature = 0,
 		selfdestructas = "smallBuildingExplosionGenericSelfd",
 		sightdistance = 273,
-		yardmap = "ooooo ooooo ooooo ooooo ooooo",
+		yardmap = "yoooy ooooo ooooo ooooo yoooy",
 		customparams = {
 			buildinggrounddecaldecayspeed = 30,
 			buildinggrounddecalsizex = 8,

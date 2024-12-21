@@ -119,8 +119,7 @@ return {
 				edgeeffectiveness = 0.4,
 				explosiongenerator = "custom:genericshellexplosion-medium-aoe",
 				gravityaffected = "true",
-				impulseboost = 0.123,
-				impulsefactor = 0.5,
+				impulsefactor = 0.8,
 				name = "Pop-up long-range heavy g2g plasma cannon",
 				noselfdamage = true,
 				predictboost = 0.2,
@@ -139,6 +138,9 @@ return {
 					subs = 90,
 					vtol = 90,
 				},
+				customparams = {
+					exclude_preaim = true
+				}
 			},
 			cortoast_gun_high = {
 				accuracy = 450,
@@ -152,7 +154,6 @@ return {
 				explosiongenerator = "custom:genericshellexplosion-large-bomb",
 				gravityaffected = "true",
 				hightrajectory = 1,
-				impulseboost = 0.123,
 				impulsefactor = 2,
 				name = "Pop-up high-trajectory long-range heavy g2g AoE plasma cannon",
 				noselfdamage = true,
@@ -172,6 +173,9 @@ return {
 					subs = 90,
 					vtol = 90,
 				},
+				customparams = {
+					exclude_preaim = true
+				}
 			},
 		},
 		weapons = {

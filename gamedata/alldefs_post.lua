@@ -207,6 +207,8 @@ function UnitDef_Post(name, uDef)
 				uDef.maxthisunit = 0
 			elseif uDef.canfly then
 				uDef.maxthisunit = 0
+			elseif uDef.customparams.disable_when_no_air then --used to remove drone carriers with no other purpose (ex. leghive but not rampart)
+				uDef.maxthisunit = 0
 			end
 			local AircraftFactories = {
 				armap = true,
@@ -487,6 +489,9 @@ function UnitDef_Post(name, uDef)
 			uDef.buildoptions[numBuildoptions + 6] = "armmeatball"
 			uDef.buildoptions[numBuildoptions + 7] = "armassimilator"
 			uDef.buildoptions[numBuildoptions + 8] = "armdronecarryland"
+		elseif name == "armap" then
+			local numBuildoptions = #uDef.buildoptions
+			uDef.buildoptions[numBuildoptions + 1] = "armfify"
 		elseif name == "armshltxuw" then
 			local numBuildoptions = #uDef.buildoptions
 			uDef.buildoptions[numBuildoptions + 1] = "armrattet4"
@@ -528,13 +533,17 @@ function UnitDef_Post(name, uDef)
 		elseif name == "coraap" then
 			local numBuildoptions = #uDef.buildoptions
 			uDef.buildoptions[numBuildoptions+1] = "corcrw"
-		elseif name == "corgant" or name == "leggant" then
+		elseif name == "corgant" then
 			local numBuildoptions = #uDef.buildoptions
 			uDef.buildoptions[numBuildoptions + 1] = "corkarganetht4"
 			uDef.buildoptions[numBuildoptions + 2] = "corgolt4"
 			uDef.buildoptions[numBuildoptions + 3] = "corakt4"
 			uDef.buildoptions[numBuildoptions + 4] = "corthermite"
 			uDef.buildoptions[numBuildoptions + 5] = "cormandot4"
+		elseif name == "leggant" then
+			local numBuildoptions = #uDef.buildoptions
+			uDef.buildoptions[numBuildoptions + 1] = "legsrailt4"
+			uDef.buildoptions[numBuildoptions + 2] = "leggobt3"
 		elseif name == "armca" or name == "armck" or name == "armcv" then
 			--local numBuildoptions = #uDef.buildoptions
 		elseif name == "corca" or name == "corck" or name == "corcv" then
@@ -581,6 +590,7 @@ function UnitDef_Post(name, uDef)
 			uDef.buildoptions[numBuildoptions + 2] = "legministarfall"
 			uDef.buildoptions[numBuildoptions + 3] = "legwint2"
 			uDef.buildoptions[numBuildoptions + 4] = "legnanotct2"
+			uDef.buildoptions[numBuildoptions + 5] = "legrwall"
 		elseif name == "armasy" then
 			local numBuildoptions = #uDef.buildoptions
 			uDef.buildoptions[numBuildoptions + 1] = "armptt2"
@@ -811,7 +821,7 @@ function UnitDef_Post(name, uDef)
 	categories["SURFACE"] = function(uDef) return not (categories.UNDERWATER(uDef) and categories.MOBILE(uDef)) and not categories.VTOL(uDef) end
 	categories["MINE"] = function(uDef) return uDef.weapondefs and uDef.weapondefs.minerange end
 	categories["COMMANDER"] = function(uDef) return commanderList[uDef.movementclass] end
-	categories["EMPABLE"] = function(uDef) return uDef.customparams and uDef.customparams.paralyzemultiplier ~= 0 end
+	categories["EMPABLE"] = function(uDef) return categories.SURFACE(uDef) and uDef.customparams and uDef.customparams.paralyzemultiplier ~= 0 end
 	
 	uDef.category = uDef.category or ""
 	if not string.find(uDef.category, "OBJECT") then -- objects should not be targetable and therefore are not assigned any other category
@@ -831,6 +841,14 @@ function UnitDef_Post(name, uDef)
 			uDef.collide = false
 		end
 	end
+	
+	if uDef.metalcost and uDef.health and uDef.canmove == true and uDef.mass == nil then
+		local healthmass = math.ceil(uDef.health/6)
+		uDef.mass = math.max(uDef.metalcost, healthmass)
+		--if uDef.metalcost < healthmass then
+		--	Spring.Echo(name, uDef.mass, uDef.metalcost, uDef.mass - uDef.metalcost)
+		--end
+	end
 
 	--Juno Rework
 	if modOptions.junorework == true then
@@ -847,6 +865,15 @@ function UnitDef_Post(name, uDef)
 			uDef.buildtime = 15000
 			uDef.weapondefs.juno_pulse.energypershot = 7000
 			uDef.weapondefs.juno_pulse.metalpershot = 100
+		end
+	end
+
+	-- Shield Rework
+	if modOptions.shieldsrework == true and uDef.weapondefs then
+		for _, weapon in pairs(uDef.weapondefs) do
+			if weapon.shield and weapon.shield.repulser then
+				uDef.onoffable = true
+			end
 		end
 	end
 
@@ -1240,8 +1267,8 @@ function UnitDef_Post(name, uDef)
 			uDef.energystorage = uDef.energystorage * x
 		end
 	end
-	if name == "armsolar" or name == "corsolar" or name == "legsolar" then
-		-- special case (but why?)
+	if uDef.energyupkeep and uDef.energyupkeep < 0 then
+		-- units with negative upkeep means they produce energy when "on".
 		local x = modOptions.multiplier_energyproduction * modOptions.multiplier_resourceincome
 		uDef.energyupkeep = uDef.energyupkeep * x
 		if uDef.energystorage then

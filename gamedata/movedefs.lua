@@ -130,7 +130,7 @@ local moveDatas = {
 		maxwaterslope = 255,
 	},
 	--OMG WE HAVE LOOT BOXES! BLAME DAMGAM NOW! damgam dm me with this message !
-	-- corch cormh armmh corah corsnap armanac corhal lootboxsilver lootboxbronze lootboxplatinum lootboxgold legfloat
+	-- corch cormh armmh corah corsnap armanac corhal lootboxsilver lootboxbronze legfloat
 	HOVER3 = {
 		badslope = 22,
 		badwaterslope = 255,
@@ -142,6 +142,7 @@ local moveDatas = {
 		maxwaterslope = 255,
 	},
 
+	-- armlun corsok armthover corthovr lootboxgold lootboxplatinum
 	HHOVER4 = {
 		badslope = 22,
 		badwaterslope = 255,
@@ -320,8 +321,8 @@ local moveDatas = {
 	-- armvang corkarg corthermite
 	HTBOT4 = {
 		crushstrength = 252,
-		footprintx = 4,
-		footprintz = 4,
+		footprintx = 6,
+		footprintz = 6,
 		maxslope = 80,
 		maxwaterdepth = 22,
 		depthModParams = {
@@ -341,10 +342,10 @@ local moveDatas = {
 		maxwaterslope = 30,
 	},
 	-- corjugg
-	HBOT5 = {
+	HBOT7 = {
 		crushstrength = 1400,
-		footprintx = 5,
-		footprintz = 5,
+		footprintx = 7,
+		footprintz = 7,
 		maxslope = 36,
 		maxwaterdepth = 30,
 		depthModParams = {

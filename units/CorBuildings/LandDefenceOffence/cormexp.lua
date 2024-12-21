@@ -122,7 +122,6 @@ return {
 				explosiongenerator = "custom:genericshellexplosion-medium",
 				firestarter = 70,
 				flighttime = 1.3,
-				impulseboost = 0.123,
 				impulsefactor = 0.123,
 				model = "cormissile.s3o",
 				name = "Heavy g2g/g2a barrage missile launcher",
@@ -144,6 +143,9 @@ return {
 					default = 260,
 					vtol = 45,
 				},
+				customparams = {
+					exclude_preaim = true
+				}
 			},
 			corsumo_weapon = {
 				areaofeffect = 12,
@@ -158,7 +160,6 @@ return {
 				explosiongenerator = "custom:laserhit-medium-green",
 				firestarter = 90,
 				impactonly = 1,
-				impulseboost = 0,
 				impulsefactor = 0,
 				laserflaresize = 7.7,
 				name = "High energy g2g laser",
@@ -180,6 +181,9 @@ return {
 					default = 215,
 					vtol = 50,
 				},
+				customparams = {
+					exclude_preaim = true
+				}
 			},
 		},
 		weapons = {

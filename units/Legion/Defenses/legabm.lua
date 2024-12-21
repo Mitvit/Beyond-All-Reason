@@ -32,8 +32,8 @@ return {
 		customparams = {
 			usebuildinggrounddecal = true,
 			buildinggrounddecaltype = "decals/legabm_aoplane.dds",
-			buildinggrounddecalsizey = 6,
-			buildinggrounddecalsizex = 6,
+			buildinggrounddecalsizey = 5,
+			buildinggrounddecalsizex = 5,
 			buildinggrounddecaldecayspeed = 30,
 			unitgroup = 'antinuke',
 			model_author = "Tharsis",
@@ -119,7 +119,6 @@ return {
 					explosiongenerator = "custom:antinuke",
 					firestarter = 100,
 					flighttime = 20,
-					impulseboost = 0.123,
 					impulsefactor = 0.123,
 					interceptor = 1,
 					metalpershot = 150,

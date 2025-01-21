@@ -11,7 +11,6 @@ return {
 		buildtime = 18000,
 		canfly = true,
 		canmove = true,
-		category = "ALL NOTLAND MOBILE NOTSUB VTOL NOWEAPON NOTSHIP NOTHOVER",
 		collide = true,
 		cruisealtitude = 70,
 		energymake = 10,
@@ -37,8 +36,8 @@ return {
 		turnrate = 240,
 		workertime = 100,
 		buildoptions = {
-			"corfus",
-			"corafus",
+			"legfus",
+			"legafus",
 			"legageo",
 			"coruwageo",
 			"legrampart",
@@ -74,7 +73,7 @@ return {
 			unitgroup = 'buildert2',
 			model_author = "Mr Bob, Flaka",
 			normaltex = "unittextures/cor_normal.dds",
-			subfolder = "coraircraft/t2",
+			subfolder = "CorAircraft/T2",
 			techlevel = 2,
 		},
 		sfxtypes = {

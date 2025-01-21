@@ -9,7 +9,6 @@ return {
 		buildpic = "LEGACK.DDS",
 		buildtime = 9700,
 		canmove = true,
-		category = "BOT MOBILE ALL NOTSUB NOWEAPON NOTSHIP NOTAIR NOTHOVER SURFACE EMPABLE",
 		collisionvolumeoffsets = "0 -1 0",
 		collisionvolumescales = "25 38 28",
 		collisionvolumetype = "Box",
@@ -40,8 +39,8 @@ return {
 		upright = false,
 		workertime = 180,
 		buildoptions = {
-			"corfus",
-			"corafus",
+			"legfus",
+			"legafus",
 			"leggant",
 			"legageo",
 			"legrampart",
@@ -75,7 +74,7 @@ return {
 			area_mex_def = "legmoho",
 			model_author = "Tharsis",
 			normaltex = "unittextures/leg_normal.dds",
-			subfolder = "corbots/t2",
+			subfolder = "CorBots/T2",
 			techlevel = 2,
 		},
 		featuredefs = {

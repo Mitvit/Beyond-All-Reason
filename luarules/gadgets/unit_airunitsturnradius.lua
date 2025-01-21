@@ -33,17 +33,20 @@ for id, wDef in pairs(WeaponDefs) do
 	end
 end
 for udid, ud in pairs(UnitDefs) do
-	if ud.customParams.fighter then
-		isFighter[udid] = true
+	if ud.canFly then
+		if ud.customParams.fighter then
+			isFighter[udid] = true
+		end
+		if (ud["weapons"] and ud["weapons"][1] and isBomb[ud["weapons"][1].weaponDef] == true) or (string.find(ud.name, 'armlance') or string.find(ud.name, 'cortitan') or string.find(ud.name, 'legatorpbomber')) then
+			isBomber[udid] = true
+		end
+		unitTurnRadius[udid] = ud.turnRadius
 	end
-	if (ud["weapons"] and ud["weapons"][1] and isBomb[ud["weapons"][1].weaponDef] == true) or (string.find(ud.name, 'armlance') or string.find(ud.name, 'cortitan')) then
-		isBomber[udid] = true
-	end
-	unitTurnRadius[udid] = ud.turnRadius
 end
 isBomb = nil
 
 function gadget:Initialize()
+	gadgetHandler:RegisterAllowCommand(CMD.ANY)
 	for ct, unitID in pairs(Spring.GetAllUnits()) do
 		gadget:UnitCreated(unitID, Spring.GetUnitDefID(unitID))
 	end

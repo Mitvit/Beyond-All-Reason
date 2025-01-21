@@ -266,12 +266,7 @@ function widget:Shutdown()
 end
 
 function widget:UnitFinished(unitID, unitDefID, unitTeam)
-	if unitTeam ~= myTeam or unitID == nil then
-		return
-	end
-
-	if GetUnitRulesParam(unitID, "resurrected") then
-		toBeAddedLater[unitID] = unitDefID
+	if unitTeam ~= myTeam or unitID == nil or GetUnitRulesParam(unitID, "resurrected") then
 		return
 	end
 
@@ -281,7 +276,7 @@ function widget:UnitFinished(unitID, unitDefID, unitTeam)
 		finiGroup[unitID] = 1
 	end
 
-	if builtInFrame or immediate or (builtInPlace[unitID] and #Spring.GetCommandQueue(unitID, 1) == 0) then
+	if not immediate and ((builtInPlace[unitID] and #Spring.GetCommandQueue(unitID, 1) == 0) or builtInFrame) then
 		local gr = unit2group[unitDefID]
 		if gr ~= nil and GetUnitGroup(unitID) == nil then
 			SetUnitGroup(unitID, gr)
@@ -310,6 +305,18 @@ function widget:UnitCreated(unitID, unitDefID, unitTeam, builderID)
 
 	if builderID and mobileBuilders[Spring.GetUnitDefID(builderID)] then
 		builtInPlace[unitID] = true
+	end
+
+	if GetUnitRulesParam(unitID, "resurrected") then
+		toBeAddedLater[unitID] = unitDefID
+		return
+	end
+
+	if immediate then
+		local gr = unit2group[unitDefID]
+		if gr ~= nil then
+			SetUnitGroup(unitID, gr)
+		end
 	end
 end
 

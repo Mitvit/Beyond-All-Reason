@@ -9,7 +9,6 @@ return {
 		buildpic = "LEGACV.DDS",
 		buildtime = 12900,
 		canmove = true,
-		category = "ALL TANK MOBILE NOTSUB NOWEAPON NOTSHIP NOTAIR NOTHOVER SURFACE EMPABLE",
 		collisionvolumeoffsets = "0 -3 0",
 		collisionvolumescales = "36 36 47",
 		collisionvolumetype = "CylZ",
@@ -43,8 +42,8 @@ return {
 		turnrate = 363,
 		workertime = 250,
 		buildoptions = {
-			[1] = "corfus",
-			[2] = "corafus",
+			[1] = "legfus",
+			[2] = "legafus",
 			[3] = "legageo",
 			[4] = "legrampart",
 			[5] = "legmoho",
@@ -77,7 +76,7 @@ return {
 			unitgroup = 'buildert2',
 			model_author = "Mr Bob",
 			normaltex = "unittextures/cor_normal.dds",
-			subfolder = "corvehicles/t2",
+			subfolder = "CorVehicles/T2",
 			techlevel = 2,
 		},
 		featuredefs = {

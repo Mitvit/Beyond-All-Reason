@@ -75,6 +75,7 @@ local armorDefs = {
 		"xmasball2_6",
 		"armstone",
 		"corstone",
+		"legstone",
 		"dice",
 		"chip",
 	},
@@ -242,6 +243,7 @@ local armorDefs = {
 		"cormort",
 		"cormstor",
 		"cormwall",
+		"legrwall",
 		"cornecro",
 		"corplat",
 		"corphantom",
@@ -409,6 +411,7 @@ local armorDefs = {
 
 		"armapt3",
 		"corapt3",
+		"legapt3",
 		"legjam",
 		"legrad",
 		"leglht",
@@ -424,6 +427,8 @@ local armorDefs = {
 		"legadvsol",
 		"legrl",
 		"legrhapsis",
+		"legsilo",
+		"legfus",
 
 		"coruwgeo",
 		"coruwageo",
@@ -436,7 +441,9 @@ local armorDefs = {
 		"legotter",
 		"legacv",
 		"legack",
-		
+		"legavrad",
+		"legavjam",
+
 		"legah",
 		"legmh",
 		"legner",
@@ -445,10 +452,8 @@ local armorDefs = {
 		"legfhp",
 		"legch",
 		"legeyes",
-	},
-
-	space = {
-		"armsat",
+		"legjav",
+		"legerailtank",
 	},
 	mines = {
 		"armfmine3",
@@ -510,7 +515,9 @@ local armorDefs = {
 		"corassistdrone",
 		"legassistdrone",
 		"legmos",
+		"legmost3",
 		"legfort",
+		"legfortt4",
 		"legca",
 		"legaca",
 		"armdrone",
@@ -572,7 +579,9 @@ local armorDefs = {
 		"legphoenix",
 		"legstronghold",
 		"legwhisper",
+		"legatorpbomber",
 		"critter_gull",
+		"armfify",
 	},
 	shields = {
 		-- Intentionally left blank. To be used in shield weapondefs only!

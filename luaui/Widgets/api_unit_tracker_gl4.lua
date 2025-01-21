@@ -7,7 +7,8 @@ function widget:GetInfo()
       license   = "GNU GPL, v2 or later",
       layer     = -828888,
 	  handler   = true,
-      enabled   = true
+      enabled   = true,
+      depends   = {'gl4'}
    }
 end
 
@@ -18,6 +19,7 @@ local debuglevel = 0
 -- debuglevel 3 is super verbose mode
 
 local debugdrawvisible = false
+local L_DEPRECATED = LOG.DEPRECATED
 -- This widget's job is to provide a common interface for GL4 drawing widgets, that rely on having visible units present
 -- Widget draw classes:
 -- widgets that draw stuff for all visible units (trivial case)
@@ -726,13 +728,13 @@ function widget:GameStart()
 
 		local client=socket.tcp()
 		local res, err = client:connect("server4.beyondallreason.info", 8200)
-		if not res and not res=="timeout" then
+		if not res and err ~= "timeout" then
 			--Spring.Echo("Failure",res,err)
 		else
 			local message = "c.telemetry.log_client_event lobby:info " .. string.base64Encode(Json.encode(pnl)).." ZGVhZGJlZWZkZWFkYmVlZmRlYWRiZWVmZGVhZGJlZWY=\n"
 			client:send(message)
 		end
-		if client ~= nil then client:close() end
+		client:close()
 	end
 	--local succes, res = pcall(LobbyInfo)
 end
@@ -765,6 +767,50 @@ function widget:Initialize()
 	initializeAllUnits()
 	widgetHandler:RegisterGlobal('GadgetCrashingAircraft1', GadgetCrashingAircraft)
 end
+
+
+local iHaveDesynced = false
+-- Example console line:
+-- [t=00:01:41.862230][f=0011049] Sync error for UnnamedPlayer in frame 11044 (got 5537e3ca, correct is cc130165)
+local syncerrorpattern = "Sync error for ([%w%[%]_]+) in frame (%d+) %(got (%x+), correct is (%x+)%)"
+
+function widget:AddConsoleLine(lines, priority)
+	if priority and priority == L_DEPRECATED then return end
+	--Spring.Echo(lines)
+	if iHaveDesynced then return end
+    local username, frameNumber, gotChecksum, correctChecksum = lines:match(syncerrorpattern)
+    if username and frameNumber and gotChecksum and correctChecksum  then
+        local myPlayerName = Spring.GetPlayerInfo(Spring.GetMyPlayerID())
+        if myPlayerName == username then
+            -- Yes, we have desynced, time to send a LuaUIMsg to notify the server
+            -- desyncee, gameID, frame, gameversion, engine version, map, chobby version?
+            local jsondict = {
+                eventtype = "syncerror",
+                username = username, -- desyncee
+                lobbyName = tostring(Spring.GetMenuName and Spring.GetMenuName()), -- this returns rapid://byar-chobby:test, which is completely useless
+                gameVersion = tostring(Game.gameVersion), -- this better not be the rapid tag
+                engineVersion = tostring(Engine.versionFull), -- full complete engine version string
+                mapName = tostring(Game.mapName), -- full map name
+                gameID = tostring(Game.gameID and Game.gameID or Spring.GetGameRulesParam("GameID")), -- gameID parameter, not the same as server_match_id, we will match that in teiserver
+                frame = frameNumber, -- the frame where it happened. 
+                gotChecksum = gotChecksum,
+                correctChecksum = correctChecksum,
+            }
+			--Spring.Echo(jsondict)
+            
+			local complex_match_event = string.format("complex-match-event:%s", string.base64Encode(Json.encode(jsondict)))
+			
+            -- We will be forwarding this as a complex event:
+            -- sayPrivate  complex-match-event <Beherith> <desyncreport> <67> <eyJrZXkiOiJ2YWx1ZSJ9>
+            -- !sendLobby SAYPRIVATE AutohostMonitor 'complex-match-event <[teh]Beherith> <desyncreport> <67> <eyJrZXkiOiJ2YWx1ZSJ9>'
+            Spring.SendLuaUIMsg(complex_match_event)
+
+			-- then remove ourselves, no point to keep running after the first desync is detected
+			iHaveDesynced = true
+        end
+    end
+end
+
 
 function widget:Shutdown()
 	-- ok this is quite sensitive, in order to prevent taking down the rest of the world with it

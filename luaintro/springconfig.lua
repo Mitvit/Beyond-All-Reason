@@ -71,6 +71,9 @@ Spring.SetConfigInt("MaxDynamicModelLights", 0)
 Spring.SetConfigInt("AllowDeferredMapRendering", 1)
 Spring.SetConfigInt("AllowDeferredModelRendering", 1)
 
+-- Enables the DrawGroundDeferred event, which is needed for deferred map edge rendering
+Spring.SetConfigInt("AllowDrawMapDeferredEvents", 1)
+
 -- Disable LoadingMT because: crashes on load, but fixed in 105.1.1-1422, redisable in 105.1.1-1432
 --Spring.SetConfigInt("LoadingMT", 0)
 
@@ -150,6 +153,23 @@ if Spring.GetConfigInt("version", 0) < version then
 		Spring.SetConfigFloat("ui_scale", 0.94)
 	end
 end
+version = 5
+if Spring.GetConfigInt("version", 0) < version then
+	Spring.SetConfigInt("version", version)
+
+	Spring.SetConfigInt("CamSpringMinZoomDistance", 300)
+	Spring.SetConfigInt("OverheadMinZoomDistance", 300)
+end
+
+
+-- apply the old pre-engine implementation stored camera minimum zoom level
+local oldMinCamHeight = Spring.GetConfigInt("MinimumCameraHeight", -1)
+if oldMinCamHeight ~= -1 then
+	Spring.SetConfigInt("MinimumCameraHeight", -1)
+	Spring.SetConfigInt("CamSpringMinZoomDistance", oldMinCamHeight)
+	Spring.SetConfigInt("OverheadMinZoomDistance", oldMinCamHeight)
+end
+
 
 Spring.SetConfigInt("VSync", Spring.GetConfigInt("VSyncGame", -1))
 
@@ -172,6 +192,7 @@ else
 	-- If user has configured a custom KeyChainTimeout, restore this setting
 	Spring.SetConfigInt("KeyChainTimeout", userKeyChainTimeout)
 end
+
 
 -- The default mouse drag threshold is set extremely low for engine by default, and fast clicking often results in a drag.
 -- This is bad for single unit commands, which turn into empty area commmands as a result of the small drag

@@ -1,3 +1,4 @@
+---@type table<string, number>
 local unitOrderTable = {
 -- UNITS
 	--CONSTRUCTORS
@@ -97,6 +98,8 @@ local unitOrderTable = {
 	['corvrad']        = 004210,
 	['armjam']         = 004220,
 	['coreter']        = 004230,
+	['legavrad']       = 004221,
+	['legavjam']       = 004222,
 
 	['armsjam']        = 004250,
 	['corsjam']        = 004260,
@@ -240,8 +243,9 @@ local unitOrderTable = {
 
 	['armsptk']        = 006600, --ALL-TERRAIN
 	['cortermite']     = 006610,
-	['leginfestor']   = 006614,
+	['leginfestor']    = 006614,
 	['legsrail']       = 006615,
+	['legsrailt4']     = 006616,
 
 	['armfboy']        = 006700, --STRONK
 	['corcan']         = 006710,
@@ -271,12 +275,14 @@ local unitOrderTable = {
 
 	--T3 LAND ATTACK
 	['armmar']         = 007000,
+	['legjav']         = 007005,
 	['corcat']         = 007010,
 	['armraz']         = 007020,
 	['corkarg']        = 007030,
 	['armvang']        = 007040,
 	['corshiva']       = 007050,
 	['legkeres']	   = 007051,
+	['legerailtank']   = 007052,
 	['legpede']        = 007055,
 	['armthor']        = 007060,
 	['leegmech']       = 007065,
@@ -294,7 +300,8 @@ local unitOrderTable = {
 	['armassimilator'] = 007220,
 
 	['armpwt4']        = 007300,
-   ['corakt4']        = 007310,
+    ['corakt4']        = 007310,
+    ['leggobt3']       = 007315,
 	['armsptkt4']      = 007320,
 	['cordemon']     = 007330,
 	['corkarganetht4'] = 007340,
@@ -307,7 +314,9 @@ local unitOrderTable = {
 	['armthundt4']     = 007500,
 	['armfepocht4']    = 007510,
 	['corfblackhyt4']  = 007520,
+	['legmost3']       = 007525,
 	['corcrwt4']       = 007530,
+	['legfortt4']       = 007540,
 
 	-- LAND AA
 	['armjeth']        = 008000,
@@ -317,6 +326,7 @@ local unitOrderTable = {
 
 	['armyork']        = 008200,
 	['corsent']        = 008210,
+	['legvflak']        = 008220,
 
 	['armah']          = 008300,
 	['corah']          = 008310,
@@ -390,6 +400,7 @@ local unitOrderTable = {
 
 	['armlance']       = 009900,
 	['cortitan']       = 009910,
+	['legatorpbomber'] = 009915,
 	['armsubk']        = 009920,
 	['corshark']       = 009930,
 	['armserp']        = 009940,
@@ -491,8 +502,10 @@ local unitOrderTable = {
    ['armfus']         = 101525,
    ['armckfus']       = 101550,
    ['corfus']         = 101600,
+   ['legfus']         = 101650,
    ['armafus']        = 101700,
    ['corafus']        = 101750,
+   ['legafus'] 		  = 101780,
 
    --ECO NRG STORAGE
    ['armestor']       = 101800,
@@ -582,6 +595,7 @@ local unitOrderTable = {
    ['legdtl']         = 104706, --exscavengers
    ['cormaw']         = 104800,
    ['cormwall']       = 104850,
+   ['legrwall']       = 104875,
    ['corscavdtf']     = 104905, --scavengers
    ['legdtf']         = 104906, --exscavengers
    ['corscavdtm']     = 104915, --scavengers
@@ -764,6 +778,7 @@ local unitOrderTable = {
    ['coratl']         = 260600,
 }
 
+---@type table<string, number>
 local newUnitOrder = {}
 for id, value in pairs(unitOrderTable) do
 	if UnitDefNames[id] then
@@ -771,7 +786,6 @@ for id, value in pairs(unitOrderTable) do
 	end
 end
 unitOrderTable = newUnitOrder
-newUnitOrder = nil
 
 for unitDefID, unitDef in pairs(UnitDefs) do
 	if unitDef.customParams.isscavenger then

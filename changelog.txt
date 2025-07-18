@@ -3,7 +3,11 @@
 • [Conbots] +15% hp
 • [T1 turrets (not aa, not popups)] -10% buildtime
 • [Commander] 25 -> 30 energymake
-• [T1 factories] -150 metalcost, -250 energycost, -1500 buildtime, 100 -> 150 buildpower
+• [T1 factories] 
+   -150 metalcost
+   -250 energycost
+   -1500 buildtime
+   100 -> 150 buildpower (165 -> 150 for shipyard)
 • [Missile trucks] taller hitbox
 • [Grunt] -2,5% costs
 • [Blitz] 99 -> 101 speed

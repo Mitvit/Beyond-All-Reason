@@ -22,6 +22,8 @@ example usage (need cheats):
 --2. fix the culling of floating structures
 --3. make units get their default stance (e.g. armcom)
 
+local gadget = gadget ---@type Gadget
+
 function gadget:GetInfo()
 	return {
 		name = "IconGenerator",
@@ -179,9 +181,9 @@ else
 	--// and replace AA by scaling the final icon down to the desired size
 	local renderX, renderY
 
-	local fbo, out_fbo
+	local fbo
 	local pre_shader, clear_shader, post_shader
-	local albedo_tex, normal_tex, depth_tex, out_tex
+	local albedo_tex, normal_tex, depth_tex
 	local final_tex, final_fbo
 	local halo_shader
 
@@ -564,10 +566,11 @@ else
 
 		gl.DeleteShader(halo_shader)
 
-		fbo, out_fbo = nil, nil
-		pre_shader, clear_shader, post_shader = nil, nil, nil
-		albedo_tex, normal_tex, depth_tex, out_tex = nil, nil, nil, nil
+		fbo = nil
+		pre_shader, clear_shader, post_shader = nil, nil, nil, nil
+		albedo_tex, normal_tex, depth_tex = nil, nil, nil
 		final_tex, final_fbo = nil, nil
+		post_tex, post_fbo = nil, nil
 		halo_shader = nil
 	end
 
@@ -1025,7 +1028,6 @@ else
 
 		--// take screenshot
 		gl.ActiveFBO(final_fbo, true, function()
-			local scale = cfg.scale
 
 			gl.Clear(GL.COLOR_BUFFER_BIT, 0, 0, 0, 0)
 			gl.Color(1, 1, 1, 1)

@@ -3,6 +3,8 @@ if Spring.GetModOptions().teamcolors_anonymous_mode ~= "disabled" then
 	return
 end
 
+local gadget = gadget ---@type Gadget
+
 function gadget:GetInfo()
 	return {
 		name = "Hats",
@@ -75,12 +77,15 @@ local unitDefCanWearHats = {
 	[144092] = true, -- [DmE]Wraxell
 	[42178] = true,  -- [pretor]
 	[119539] = true, -- [Stud]Lovish
+	[641] = true, -- ZLO
 }
-local champion = { --   Fight Night 1v1 winner
+local champion = { --   Fight Night 1v1 and Master's League winners
 	[139738] = true, -- [DmE]FlyingDuck
 	[82263] = true, -- PRO_Autopilot
 	[975] = true, -- StarDoM
 	[2377] = true, -- Therxyy
+	[439] = true, -- Goopy
+	[70311] = true, -- PRO_BTCV
 }
  local vikings = { -- Omega Series 3: Winners
 	[59340] = true,  -- Austin
@@ -91,22 +96,29 @@ local champion = { --   Fight Night 1v1 winner
 	[87571] = true,  -- Nezah
 }
 local kings = {
-	[64215] = true,  -- XFactorLive
+	[82263] = true,  -- PRO-autopilot
 }
 local goldMedals = { -- Nation Wars 1st place
-	[59340] = true,  -- [HELO]Austin
 	[64215] = true,  -- XFactorLive
-	[1332] = true,  -- Flash
-	[50820] = true,  -- Emre
+	[116414] = true, -- [SG]random_variable
+	[3778] = true,   -- PRO_che
+	[9361] = true,   -- [DmE]ChickenDinner
+	[1422] = true,   -- ZaRxT4
 }
 local silverMedals = { -- Nation Wars 2nd place
-	[76221] = true, -- InDaClub
-	[82263] = true, -- PRO-autopilot
+	[63960] = true,  -- Delfea
+	[59916] = true,  -- Kuchy
+	[137454] = true, -- Chronopolize
+	[44807] = true,  -- Ezreal
+	[97867] = true,  -- [KILL]SirIcecream55
+	[119832] = true, -- Darkclone
 }
 local bronzeMedals = { -- Nation Wars 3rd place
-	[151863] = true,  -- Blodir
-	[38971] = true, -- Yanami
-	[123900] = true, -- Narnuk
+	[82811] = true,   -- [DmE]SlickLikeVik
+	[139750] = true,  -- TM_Sashkorin
+	[134499] = true,  -- Archangels
+	[60841] = true,   -- Alhazred
+	[8069] = true,    -- Grumpy
 }
 local uniques = {--playername, hat ident, CaSe MaTtErS
 }

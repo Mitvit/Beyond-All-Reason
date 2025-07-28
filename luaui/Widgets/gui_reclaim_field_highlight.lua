@@ -1,3 +1,5 @@
+local widget = widget ---@type Widget
+
 function widget:GetInfo()
 	return {
 		name      = "Reclaim Field Highlight",
@@ -574,13 +576,13 @@ local function UpdateFeatureReclaim()
 		end
 	end
 
-	if #dirty>0 and not removed then
+	if removed then
+		clusterizingNeeded = true
+	elseif next(dirty) then
+		redrawingNeeded = true
 		for ii in pairs(dirty) do
 			featureClusters[ii].text = string.formatSI(featureClusters[ii].metal)
 		end
-		redrawingNeeded = true
-	elseif removed then
-		clusterizingNeeded = true
 	end
 end
 
@@ -651,7 +653,7 @@ end
 -- Drawing
 
 local camUpVector
-local cameraScale
+local cameraScale = 1
 
 local function DrawHullVertices(hull)
 	for j = 1, #hull do

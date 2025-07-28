@@ -1,5 +1,7 @@
 local versionNum = '5.00'
 
+local widget = widget ---@type Widget
+
 function widget:GetInfo()
 	return {
 		name = "Auto Group",
@@ -113,7 +115,7 @@ local function addAllUnits()
 end
 
 local function ChangeUnitTypeAutogroupHandler(_, _, args, data)
-	local gr = args[1]
+	local gr = args and args[1]
 	local removeAll = data and data['removeAll']
 
 	if not removeAll and not gr then return end -- noop if add to autogroup and no argument
@@ -157,8 +159,7 @@ local function ChangeUnitTypeAutogroupHandler(_, _, args, data)
 			local curUnitDefID = GetUnitDefID(unitID)
 			if selUnitDefIDs[curUnitDefID] then
 				if gr then
-					local finishedBuilding = not GetUnitIsBeingBuilt(unitID)
-					if finishedBuilding then
+					if immediate or not GetUnitIsBeingBuilt(unitID) then
 						SetUnitGroup(unitID, gr)
 						SelectUnitArray({ unitID }, true)
 					end

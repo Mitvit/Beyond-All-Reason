@@ -136,7 +136,7 @@ return {
 				weaponvelocity = 1000,
 				damage = {
 					default = 302,
-					vtol = 71,
+					vtol = 54,
 				},
 			},
 			sumohvylaserroar = {
@@ -152,6 +152,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 		},

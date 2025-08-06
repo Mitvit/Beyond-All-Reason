@@ -137,7 +137,7 @@ return {
 				damage = {
 					commanders = 112.5,
 					default = 75,
-					vtol = 5,
+					vtol = 13,
 				},
 			},
 			hllt_top = {
@@ -176,7 +176,7 @@ return {
 				damage = {
 					commanders = 112.5,
 					default = 75,
-					vtol = 5,
+					vtol = 13,
 				},
 			},
 		},

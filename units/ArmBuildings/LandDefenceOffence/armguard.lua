@@ -134,7 +134,7 @@ return {
 				damage = {
 					default = 300,
 					subs = 150,
-					vtol = 90,
+					vtol = 100,
 				},
 			},
 			plasma_high = {
@@ -167,7 +167,7 @@ return {
 				damage = {
 					default = 300,
 					subs = 150,
-					vtol = 90,
+					vtol = 100,
 				},
 			},
 			smart_trajectory_dummy = {
@@ -199,6 +199,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 		},

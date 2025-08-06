@@ -146,6 +146,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 			sdmssl = {

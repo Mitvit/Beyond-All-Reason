@@ -138,7 +138,7 @@ return {
 				damage = {
 					default = 225,
 					subs = 100,
-					vtol = 40,
+					vtol = 75,
 				},
 			},
 			armcl_missile = {

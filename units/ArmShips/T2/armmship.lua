@@ -200,6 +200,7 @@ return {
 					commanders = 350,
 					default = 650,
 					subs = 5,
+					vtol = 217,
 				},
 			},
 			rocket_split = {

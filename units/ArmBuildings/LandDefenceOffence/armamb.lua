@@ -141,7 +141,7 @@ return {
 				damage = {
 					default = 350,
 					subs = 150,
-					vtol = 90,
+					vtol = 116,
 				},
 			},
 			armamb_gun_high = {
@@ -174,7 +174,7 @@ return {
 				damage = {
 					default = 350,
 					subs = 150,
-					vtol = 90,
+					vtol = 116,
 				},
 			},
 			smart_trajectory_dummy = {
@@ -207,6 +207,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 		},

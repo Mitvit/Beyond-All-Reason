@@ -134,7 +134,7 @@ return {
 					default = 350,
 					lboats = 350,
 					subs = 90,
-					vtol = 95,
+					vtol = 116,
 				},
 			},
 			plasma_high = {
@@ -168,7 +168,7 @@ return {
 					default = 350,
 					lboats = 350,
 					subs = 90,
-					vtol = 95,
+					vtol = 116,
 				},
 			},
 			smart_trajectory_dummy = {
@@ -199,6 +199,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 		},

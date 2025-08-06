@@ -137,6 +137,7 @@ return {
 				weaponvelocity = 900,
 				damage = {
 					default = 165,
+					vtol = 55,
 				},
 			},
 			corkorg_laser = {
@@ -173,7 +174,7 @@ return {
 				damage = {
 					commanders = 1200,
 					default = 5500,
-					vtol = 2750,
+					vtol = 990,
 				},
 			},
 			corkorg_rocket = {
@@ -250,6 +251,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 			krogkick = {
@@ -286,6 +288,7 @@ return {
 				},
 				damage = {
 					default = 150,
+					vtol = 50,
 				},
 			},
 			krogweaponaim = {
@@ -302,6 +305,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 			krogweaponrestore = {
@@ -318,6 +322,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 		},

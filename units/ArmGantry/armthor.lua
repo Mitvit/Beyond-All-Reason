@@ -153,6 +153,7 @@ return {
 				},
 				damage = {
 					default = 300,
+					vtol = 54,
 				},
 			},
 			empmissile = {

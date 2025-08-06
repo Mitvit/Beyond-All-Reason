@@ -94,6 +94,7 @@ return {
 				damage = {
 					crawlingbombs = 1000,
 					default = 0,
+					vtol = 0,
 				},
 			},
 			crawl_dummy = {

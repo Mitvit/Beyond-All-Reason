@@ -181,7 +181,7 @@ return {
 				damage = {
 					default = 370,
 					subs = 370,
-					vtol = 60,
+					vtol = 123,
 				},
 			},
 			cannonuw = {

@@ -114,7 +114,7 @@ return {
 				damage = {
 					commanders = 350,
 					default = 231,
-					vtol = 52,
+					vtol = 41,
 				},
 			},
 		},

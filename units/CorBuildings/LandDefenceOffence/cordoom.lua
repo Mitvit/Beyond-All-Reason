@@ -141,6 +141,7 @@ return {
 				damage = {
 					commanders = 999,
 					default = 4500,
+					vtol = 810,
 				},
 			},
 			doomsday_green_laser = {
@@ -175,7 +176,7 @@ return {
 				weaponvelocity = 800,
 				damage = {
 					default = 247,
-					vtol = 65,
+					vtol = 44,
 				},
 			},
 			doomsday_red_laser = {
@@ -212,6 +213,7 @@ return {
 				weaponvelocity = 2250,
 				damage = {
 					default = 40,
+					vtol = 7,
 				},
 			},
 		},

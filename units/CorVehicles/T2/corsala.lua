@@ -151,6 +151,7 @@ return {
 				weapontype = "BeamLaser",
 				damage = {
 					default = 18,
+					vtol = 3,
 				},
 			},
 		},

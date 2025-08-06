@@ -125,7 +125,7 @@ return {
 				weaponvelocity = 422.13742,
 				damage = {
 					default = 450,
-					vtol = 65,
+					vtol = 150,
 				},
 			},
 			cor_batslaser = {
@@ -162,7 +162,7 @@ return {
 				},
 				damage = {
 					default = 300,
-					vtol = 65,
+					vtol = 54,
 				},
 			},
 		},

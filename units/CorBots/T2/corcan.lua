@@ -112,6 +112,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 			cor_canlaser = {
@@ -147,7 +148,7 @@ return {
 				weaponvelocity = 700,
 				damage = {
 					default = 275,
-					vtol = 25,
+					vtol = 49,
 				},
 			},
 		},

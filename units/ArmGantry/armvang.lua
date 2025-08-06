@@ -142,6 +142,7 @@ return {
 					default = 1265,
 					shields = 765,
 					subs = 500,
+					vtol = 422,
 				},
 			},
 			shocker_low = {
@@ -181,6 +182,7 @@ return {
 					default = 1265,
 					shields = 765,
 					subs = 500,
+					vtol = 422,
 				},
 			},
 			smart_trajectory_dummy = {
@@ -217,6 +219,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 		},

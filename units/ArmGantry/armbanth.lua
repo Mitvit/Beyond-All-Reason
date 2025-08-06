@@ -217,6 +217,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 			tehlazerofdewm = {
@@ -250,7 +251,7 @@ return {
 				damage = {
 					commanders = 1800,
 					default = 6000,
-					vtol = 3000,
+					vtol = 1080,
 				},
 			},
 		},

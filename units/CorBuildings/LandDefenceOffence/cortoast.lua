@@ -139,7 +139,7 @@ return {
 					hvyboats = 420,
 					lboats = 420,
 					subs = 90,
-					vtol = 90,
+					vtol = 140,
 				},
 			},
 			cortoast_gun_high = {
@@ -174,7 +174,7 @@ return {
 					hvyboats = 420,
 					lboats = 420,
 					subs = 90,
-					vtol = 90,
+					vtol = 140,
 				},
 			},
 			smart_trajectory_dummy = {
@@ -206,6 +206,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 		},

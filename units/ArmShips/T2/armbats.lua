@@ -129,7 +129,7 @@ return {
 				},
 				damage = {
 					default = 300,
-					vtol = 65,
+					vtol = 100,
 				},
 			},
 		},

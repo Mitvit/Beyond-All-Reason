@@ -133,6 +133,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 			corah_weapon = {

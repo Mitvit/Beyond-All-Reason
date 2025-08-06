@@ -162,7 +162,7 @@ return {
 				damage = {
 					default = 220,
 					subs = 220,
-					vtol = 40,
+					vtol = 73,
 				},
 			},
 			laser = {
@@ -199,7 +199,7 @@ return {
 				},
 				damage = {
 					default = 75,
-					vtol = 8,
+					vtol = 13,
 				},
 			},
 		},

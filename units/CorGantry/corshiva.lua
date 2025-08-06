@@ -129,7 +129,7 @@ return {
 				damage = {
 					default = 600,
 					subs = 130,
-					vtol = 55,
+					vtol = 200,
 				},
 			},
 			shiva_rocket = {

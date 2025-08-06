@@ -227,7 +227,7 @@ return {
 				weaponvelocity = 700,
 				damage = {
 					default = 270,
-					vtol = 65,
+					vtol = 48,
 				},
 			},
 			heavyplasma = {
@@ -257,7 +257,7 @@ return {
 				weaponvelocity = 600,
 				damage = {
 					default = 600,
-					vtol = 250,
+					vtol = 200,
 				},
 			},
 		},

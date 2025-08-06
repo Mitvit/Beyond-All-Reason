@@ -138,7 +138,7 @@ return {
 					default = 675,
 					hvyboats = 472.5,
 					subs = 300,
-					vtol = 26,
+					vtol = 225,
 				},
 			},
 		},

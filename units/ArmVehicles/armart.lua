@@ -138,7 +138,7 @@ return {
 				damage = {
 					default = 182,
 					subs = 61,
-					vtol = 20,
+					vtol = 60,
 				},
 			},
 		},

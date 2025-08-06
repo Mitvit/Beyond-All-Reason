@@ -139,7 +139,7 @@ return {
 				},
 				damage = {
 					default = 75,
-					vtol = 15,
+					vtol = 13,
 				},
 			},
 			advdepthcharge = {
@@ -203,7 +203,7 @@ return {
 				weaponvelocity = 700,
 				damage = {
 					default = 200,
-					vtol = 22,
+					vtol = 36,
 				},
 			},
 		},

@@ -136,6 +136,7 @@ return {
 					default = 2000,
 					shields = 1000,
 					subs = 600,
+					vtol = 668,
 				},
 			},
 		},

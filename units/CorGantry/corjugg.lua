@@ -140,6 +140,7 @@ return {
 				},
 				damage = {
 					default = 75,
+					vtol = 13,
 				},
 			},
 			juggernaut_fire = {
@@ -209,6 +210,7 @@ return {
 				weaponvelocity = 2250,
 				damage = {
 					default = 150,
+					vtol = 27,
 				},
 			},
 			juggfootstep = {
@@ -238,6 +240,7 @@ return {
 				},
 				damage = {
 					default = 0,
+					vtol = 0,
 				},
 			},
 		},

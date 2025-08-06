@@ -107,6 +107,7 @@ return {
 				},
 				damage = {
 					default = 600,
+					vtol = 108,
 				},
 			},
 		},

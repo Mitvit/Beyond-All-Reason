@@ -235,7 +235,7 @@ return {
 				},
 				damage = {
 					default = 500,
-					vtol = 200,
+					vtol = 167,
 				},
 			},
 			mediumplasma = {
@@ -265,7 +265,7 @@ return {
 				},
 				damage = {
 					default = 270,
-					vtol = 65,
+					vtol = 90,
 				},
 			},
 		},

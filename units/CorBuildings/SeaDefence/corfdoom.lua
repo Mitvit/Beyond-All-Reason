@@ -125,7 +125,7 @@ return {
 				damage = {
 					default = 420,
 					subs = 90,
-					vtol = 90,
+					vtol = 140,
 				},
 			},
 			doomsday_green_laser = {
@@ -162,7 +162,7 @@ return {
 				},
 				damage = {
 					default = 231,
-					vtol = 52,
+					vtol = 41,
 				},
 			},
 			doomsday_red_laser = {
@@ -202,6 +202,7 @@ return {
 				},
 				damage = {
 					default = 40,
+					vtol = 7,
 				},
 			},
 		},

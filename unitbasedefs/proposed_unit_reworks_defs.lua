@@ -12,7 +12,6 @@ local function proposed_unit_reworksTweaks(name, uDef)
 		uDef.script = "Units/ARMSPY2.cob"
 		uDef.selfdestructas = "smallExplosionGeneric"
 		uDef.weapondefs.crawl_dummy = {
-				areaofeffect = 32,
 				avoidfeature = false,
 				beamdecay = 0.5,
 				beamtime = 1,
@@ -27,6 +26,7 @@ local function proposed_unit_reworksTweaks(name, uDef)
 				energypershot = 500,
 				explosiongenerator = "custom:laserhit-emp",
 				impulsefactor = 0,
+				impactonly = 1,
 				laserflaresize = 6.05,
 				name = "Heavy EMP beam",
 				noselfdamage = true,

@@ -1253,10 +1253,10 @@ function UnitDef_Post(name, uDef)
 	end
 
 	-- Proposed Unit Reworks
-	if modOptions.proposed_unit_reworks == true then
+	--if modOptions.proposed_unit_reworks == true then
 		local proposed_unit_reworks = VFS.Include("unitbasedefs/proposed_unit_reworks_defs.lua")
 		uDef = proposed_unit_reworks.proposed_unit_reworksTweaks(name, uDef)
-	end
+	--end
 
 	-- Community Balance Patch
 	if modOptions.community_balance_patch ~= "disabled" then

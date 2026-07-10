@@ -17,6 +17,19 @@ local function proposed_unit_reworksTweaks(name, uDef)
 		uDef.weapondefs.armwar_laser.damage.default = 40
 	end
 
+	if name == "armham" then
+		uDef.speed = 47
+		uDef.weapondefs.arm_ham.areaofeffect = 48
+		uDef.weapondefs.arm_ham.reloadtime = 1.8
+	end
+	if name == "corthud" then
+		uDef.health = 1200
+		uDef.buildtime = 2400
+		uDef.weapondefs.arm_ham.areaofeffect = 48
+		uDef.weapondefs.arm_ham.reloadtime = 1.8
+	end
+
+
 	if name == "armart" then
 		uDef.speed = 56 --was 54
 		uDef.weapondefs.tawf113_weapon.weaponvelocity = 400

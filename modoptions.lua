@@ -1562,7 +1562,7 @@ local options = {
         type 	= "bool",
         hidden 	= true,
         section = "options_experimental",
-        def 	= false,
+        def 	= true,
     },
 
     {

@@ -538,9 +538,9 @@ local function unitDef_Post(name, uDef)
 	end
 
 	-- Proposed Unit Reworks
-	--if modOptions.proposed_unit_reworks == true then
+	if modOptions.proposed_unit_reworks == true then
 		uDef = proposed_unit_reworksTweaks(name, uDef)
-	--end
+	end
 
 	-- Community Balance Patch
 	if modOptions.community_balance_patch ~= "disabled" then

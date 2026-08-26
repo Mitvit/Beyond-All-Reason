@@ -90,19 +90,6 @@ local function proposed_unit_reworksTweaks(name, uDef)
 		uDef.speed = 56
 		uDef.turnrate = 300
 	end
-	if name == "corraid" then
-		uDef.weapondefs.arm_lightcannon.reloadtime = 1.2
-		uDef.buildtime = 3900
-		uDef.sightdistance = 350
-	end
-	if name == "armstump" then
-		uDef.weapondefs.arm_lightcannon.reloadtime = 1.2
-		uDef.buildtime = 3400
-		uDef.sightdistance = 350
-	end
-	if name == "corlevlr" then
-		uDef.health = 1400
-	end
 
 	if name == "armllt" then
 		uDef.buildtime = uDef.buildtime - 900
@@ -170,31 +157,7 @@ local function proposed_unit_reworksTweaks(name, uDef)
 		uDef.health = 2700
 	end
 
-
-	if name == "armmav" then
-		uDef.weapondefs.armmav_weapon.impactonly = 0
-		uDef.weapondefs.armmav_weapon.areaofeffect = 24
-		uDef.weapondefs.armmav_weapon.weaponvelocity = 600
-		uDef.health = 1800
-	end
-	if name == "armzeus" then
-		uDef.speed = 48
-		uDef.health = 3500
-		uDef.energycost = 6000
-		uDef.buildtime = 9000
-	end
-	if name == "corcan" then
-		uDef.speed = 38
-		uDef.health = 6500
-		uDef.energycost = 9000
-		uDef.buildtime = 12000
-		uDef.weapondefs.cor_canlaser.damage.vtol = 55
-	end
-	
-
-	
-
-		if name == "armaap" or name == "armalab" or name == "armasy" or name == "armavp"
+	if name == "armaap" or name == "armalab" or name == "armasy" or name == "armavp"
 	or name == "coraap" or name == "coralab" or name == "corasy" or name == "coravp"
 	or name == "legaap" or name == "legalab" or name == "legadvshipyard" or name == "legavp"
 	then
@@ -202,16 +165,26 @@ local function proposed_unit_reworksTweaks(name, uDef)
 		uDef.energycost = uDef.energycost + 7000
 	end
 
+	if name == "armap" or name == "armlab" or name == "armsy" or name == "armvp"
+	or name == "corap" or name == "corlab" or name == "corsy" or name == "corvp"
+	or name == "legap" or name == "leglab" or name == "legsy" or name == "legvp"
+	then
+		uDef.energycost = uDef.energycost + 150
+	end
 
 	if name == "armcom" or name == "corcom" or name == "legcom" then
-		uDef.energymake = 45
+		uDef.energymake = 50
+		uDef.metalmake = 2.5
 	end
 
 	if name == "armmex" or name == "cormex" or name == "legmex" then
 		uDef.energycost = uDef.energycost + 100
 	end
 
-	if name == "armck" or name == "corck" or name == "legck" then
+	if name == "armck" or name == "corck" or name == "legck" 
+	or name == "armcv" or name == "corcv" or name == "legcv" 
+	or name == "armca" or name == "corca" or name == "legca" 
+	then
 		uDef.energycost = uDef.energycost + 200
 	end
 

@@ -52,7 +52,7 @@ local function proposed_unit_reworksTweaks(name, uDef)
 
 	if name == "armmart" then
 		uDef.metalcost = 260 --320
-		uDef.speed = 52 --was 60
+		uDef.speed = 48 --was 60
 		uDef.weapondefs.arm_artillery.edgeeffectiveness = 0.15
 		uDef.weapondefs.arm_artillery.accuracy = 0
 		uDef.weapondefs.arm_artillery.reloadtime = 3.4 --3.05
@@ -60,7 +60,7 @@ local function proposed_unit_reworksTweaks(name, uDef)
 	end
 	if name == "cormart" then
 		uDef.metalcost = 320 --400
-		uDef.speed = 50 -- was 58
+		uDef.speed = 46 -- was 58
 		uDef.weapondefs.cor_artillery.edgeeffectiveness = 0.15
 		uDef.weapondefs.cor_artillery.accuracy = 0
 		uDef.weapondefs.cor_artillery.reloadtime = 6.4 --5

@@ -175,6 +175,7 @@ local function proposed_unit_reworksTweaks(name, uDef)
 	if name == "armcom" or name == "corcom" or name == "legcom" then
 		uDef.energymake = 50
 		uDef.metalmake = 2.5
+		uDef.speed = 38
 	end
 
 	if name == "armmex" or name == "cormex" or name == "legmex" then

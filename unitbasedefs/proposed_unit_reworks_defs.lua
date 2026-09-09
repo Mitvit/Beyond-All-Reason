@@ -55,25 +55,27 @@ local function proposed_unit_reworksTweaks(name, uDef)
 		uDef.speed = 48 --was 60
 		uDef.weapondefs.arm_artillery.edgeeffectiveness = 0.15
 		uDef.weapondefs.arm_artillery.accuracy = 0
-		uDef.weapondefs.arm_artillery.reloadtime = 3.4 --3.05
-		uDef.weapondefs.arm_artillery.damage.default = 300 --260. DPS 85 -> 91
+		uDef.weapondefs.arm_artillery.reloadtime = 3.5 --3.05
+		uDef.weapondefs.arm_artillery.damage.default = 300 --260. DPS 85 -> 85
 	end
 	if name == "cormart" then
 		uDef.metalcost = 320 --400
 		uDef.speed = 46 -- was 58
 		uDef.weapondefs.cor_artillery.edgeeffectiveness = 0.15
 		uDef.weapondefs.cor_artillery.accuracy = 0
-		uDef.weapondefs.cor_artillery.reloadtime = 6.4 --5
-		uDef.weapondefs.cor_artillery.damage.default = 580 --420. DPS 84 -> 90
+		uDef.weapondefs.cor_artillery.reloadtime = 6.5 --5
+		uDef.weapondefs.cor_artillery.damage.default = 550 --420. DPS 84 -> 84
 	end
 
 	if name == "armsam" then
 		uDef.weapondefs.armtruck_missile.flighttime = 1.6
 		uDef.weapondefs.armtruck_missile.tracks = true
 		uDef.weapondefs.armtruck_missile.turnrate = 10000
-		uDef.weapondefs.armtruck_missile.damage.default = 55
+		uDef.weapondefs.armtruck_missile.damage.default = 54
 		--uDef.weapondefs.armtruck_missile.range = 525
 		uDef.weapondefs.armtruck_missile.weaponvelocity = 550
+		uDef.weapondefs.armtruck_missile.reloadtime = 3
+		uDef.weapondefs.armtruck_aa.reloadtime = 3
 	end
 	if name == "cormist" then
 		uDef.weapondefs.cortruck_missile.tracks = true
@@ -82,6 +84,8 @@ local function proposed_unit_reworksTweaks(name, uDef)
 		uDef.weapondefs.cortruck_missile.damage.default = 40
 		uDef.weapondefs.cortruck_missile.flighttime = 1.6
 		uDef.weapondefs.cortruck_missile.weaponvelocity = 550		
+		uDef.weapondefs.cortruck_missile.reloadtime = 2.2
+		uDef.weapondefs.cortruck_aa.reloadtime = 2.2
 	end
 
 	if name == "armjanus" then
@@ -161,8 +165,8 @@ local function proposed_unit_reworksTweaks(name, uDef)
 	or name == "coraap" or name == "coralab" or name == "corasy" or name == "coravp"
 	or name == "legaap" or name == "legalab" or name == "legadvshipyard" or name == "legavp"
 	then
-		uDef.metalcost = uDef.metalcost - 300
-		uDef.energycost = uDef.energycost + 7000
+		uDef.metalcost = uDef.metalcost - 100
+		uDef.energycost = uDef.energycost + 3000
 	end
 
 	if name == "armap" or name == "armlab" or name == "armsy" or name == "armvp"

@@ -32,22 +32,26 @@ local function proposed_unit_reworksTweaks(name, uDef)
 
 	if name == "armart" then
 		uDef.speed = 56 --was 54
-		uDef.weapondefs.tawf113_weapon.weaponvelocity = 400
+		uDef.weapondefs.tawf113_weapon.weaponvelocity = 380
 		uDef.weapondefs.tawf113_weapon.mygravity = nil
-		uDef.weapondefs.tawf113_weapon.areaofeffect = 100 --75
+		uDef.weapondefs.tawf113_weapon.areaofeffect = 80 --75
 		uDef.weapondefs.tawf113_weapon.range = 730 --710
-		uDef.weapondefs.tawf113_weapon.impulsefactor = 0.7
+		uDef.weapondefs.tawf113_weapon.impulsefactor = 0.5
 		uDef.weapondefs.tawf113_weapon.damage.default = 210
+		uDef.weapondefs.tawf113_weapon.accuracy = 100
 	end
 	if name == "corwolv" then
 		uDef.speed = 50 --was 48
-		uDef.weapondefs.corwolv_gun.weaponvelocity = 400
+		uDef.weapondefs.corwolv_gun.weaponvelocity = 380
 		uDef.weapondefs.corwolv_gun.mygravity = nil
 		uDef.weapondefs.corwolv_gun.range = 730 --710
-		uDef.weapondefs.corwolv_gun.areaofeffect = 140 --113
-		uDef.weapondefs.corwolv_gun.impulsefactor = 0.7
+		uDef.weapondefs.corwolv_gun.areaofeffect = 144 --113
+		uDef.weapondefs.corwolv_gun.impulsefactor = 0.5
 		uDef.weapondefs.corwolv_gun.damage.default = 320
 		uDef.health = 850
+	end
+	if name == "armstump" then
+		uDef.weapondefs.arm_lightcannon.impulsefactor = 0.5
 	end
 
 	if name == "armmart" then

@@ -4,7 +4,7 @@ return {
 		buildpic = "ARMHP.DDS",
 		buildtime = 8700,
 		canmove = true,
-		canReclaim = false,
+		canreclaim = false,
 		collisionvolumescales = "100 40 90",
 		collisionvolumetype = "Box",
 		corpse = "DEAD",
@@ -44,9 +44,9 @@ return {
 			normaltex = "unittextures/Arm_normal.dds",
 			quickstart_discountable = true,
 			subfolder = "ArmBuildings/LandFactories",
+			techlevel = 1.5,
 			unitgroup = "builder",
 			usebuildinggrounddecal = true,
-			techlevel = 1.5,
 		},
 		featuredefs = {
 			dead = {

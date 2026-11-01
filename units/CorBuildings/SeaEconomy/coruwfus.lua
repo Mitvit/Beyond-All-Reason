@@ -34,10 +34,10 @@ return {
 			normaltex = "unittextures/cor_normal.dds",
 			removestop = true,
 			removewait = true,
+			restrictions_inclusion = "_nofusion_",
 			subfolder = "CorBuildings/SeaEconomy",
 			techlevel = 2,
 			unitgroup = "energy",
-			restrictions_inclusion = "_nofusion_",
 			usebuildinggrounddecal = true,
 		},
 		featuredefs = {

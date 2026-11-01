@@ -65,8 +65,6 @@ return {
 				shadtrans = 1,
 			},
 		},
-		sfxtypes = {
-			pieceexplosiongenerators = {},
-		},
+		sfxtypes = {},
 	},
 }

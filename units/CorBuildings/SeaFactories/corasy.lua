@@ -4,7 +4,7 @@ return {
 		buildpic = "CORASY.DDS",
 		buildtime = 24000,
 		canmove = true,
-		canReclaim = false,
+		canreclaim = false,
 		collisionvolumeoffsets = "0 10 -2",
 		collisionvolumescales = "186 78 183",
 		collisionvolumetype = "Box",

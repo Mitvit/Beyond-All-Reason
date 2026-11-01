@@ -4,7 +4,7 @@ return {
 		buildpic = "CORHP.DDS",
 		buildtime = 8700,
 		canmove = true,
-		canReclaim = false,
+		canreclaim = false,
 		collisionvolumeoffsets = "0 5 0",
 		collisionvolumescales = "96 32 96",
 		collisionvolumetype = "Box",
@@ -46,9 +46,9 @@ return {
 			normaltex = "unittextures/cor_normal.dds",
 			quickstart_discountable = true,
 			subfolder = "CorBuildings/LandFactories",
+			techlevel = 1.5,
 			unitgroup = "builder",
 			usebuildinggrounddecal = true,
-			techlevel = 1.5,
 		},
 		featuredefs = {
 			dead = {

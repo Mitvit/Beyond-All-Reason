@@ -38,8 +38,6 @@ return {
 			removewait = true,
 			subfolder = "CorBuildings/SeaUtil",
 		},
-		sfxtypes = {
-			pieceexplosiongenerators = {},
-		},
+		sfxtypes = {},
 	},
 }

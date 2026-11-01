@@ -4,7 +4,7 @@ return {
 		buildpic = "CORAMSUB.DDS",
 		buildtime = 11400,
 		canmove = true,
-		canReclaim = false,
+		canreclaim = false,
 		collisionvolumeoffsets = "0 0 -6",
 		collisionvolumescales = "96 30 96",
 		collisionvolumetype = "Box",
@@ -45,9 +45,9 @@ return {
 			model_author = "FireStorm",
 			normaltex = "unittextures/cor_normal.dds",
 			subfolder = "CorBuildings/SeaFactories",
+			techlevel = 1.5,
 			unitgroup = "builder",
 			usebuildinggrounddecal = true,
-			techlevel = 1.5,
 		},
 		featuredefs = {
 			dead = {

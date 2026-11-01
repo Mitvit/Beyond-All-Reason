@@ -5,7 +5,7 @@ return {
 		buildpic = "CORPLAT.DDS",
 		buildtime = 11800,
 		canmove = true,
-		canReclaim = false,
+		canreclaim = false,
 		category = "SURFACE UNDERWATER",
 		corpse = "DEAD",
 		energycost = 5500,
@@ -41,8 +41,8 @@ return {
 			model_author = "Mr Bob",
 			normaltex = "unittextures/cor_normal.dds",
 			subfolder = "CorBuildings/SeaFactories",
-			unitgroup = "builder",
 			techlevel = 1.5,
+			unitgroup = "builder",
 		},
 		featuredefs = {
 			dead = {

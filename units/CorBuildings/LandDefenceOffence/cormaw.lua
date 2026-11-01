@@ -79,9 +79,7 @@ return {
 				shadtrans = 1,
 			},
 		},
-		sfxtypes = {
-			explosiongenerators = {},
-		},
+		sfxtypes = {},
 		sounds = {
 			canceldestruct = "cancel2",
 			cloak = "kloak1",

@@ -31,10 +31,10 @@ return {
 			model_author = "Beherith",
 			normaltex = "unittextures/Arm_normal.dds",
 			removewait = true,
+			restrictions_inclusion = "_notacnukes_",
 			subfolder = "ArmBuildings/LandDefenceOffence",
 			techlevel = 2,
 			unitgroup = "emp",
-			restrictions_inclusion = "_notacnukes_",
 			usebuildinggrounddecal = true,
 			yardmap = "ooooooo ooooooo ooooooo ooooooo ooooooo ooooooo",
 		},
@@ -139,9 +139,9 @@ return {
 				customparams = {
 					cruise_and_verticalize = true,
 					cruise_chase_factor = 0.9,
-					uptime_max = 7,
 					shield_aoe_penetration = true,
 					stockpilelimit = 10,
+					uptime_max = 7,
 				},
 				damage = {
 					default = 50000,

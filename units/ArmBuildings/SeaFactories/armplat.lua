@@ -1,11 +1,11 @@
 return {
 	armplat = {
-		activatewhenbuilt = false, --sonar/radar only activates when deployed and building stuff.
+		activatewhenbuilt = false,
 		builder = true,
 		buildpic = "ARMPLAT.DDS",
 		buildtime = 12000,
 		canmove = true,
-		canReclaim = false,
+		canreclaim = false,
 		category = "SURFACE UNDERWATER",
 		corpse = "DEAD",
 		energycost = 5000,
@@ -42,10 +42,10 @@ return {
 			airfactory = true,
 			model_author = "FireStorm",
 			normaltex = "unittextures/Arm_normal.dds",
-			subfolder = "ArmBuildings/SeaFactories",
-			unitgroup = "builder",
 			restrictions_inclusion = "_noair_",
+			subfolder = "ArmBuildings/SeaFactories",
 			techlevel = 1.5,
+			unitgroup = "builder",
 		},
 		featuredefs = {
 			dead = {

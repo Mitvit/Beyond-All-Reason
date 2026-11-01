@@ -31,10 +31,10 @@ return {
 			model_author = "Mr Bob",
 			normaltex = "unittextures/cor_normal.dds",
 			removewait = true,
+			restrictions_inclusion = "_notacnukes_",
 			subfolder = "CorBuildings/LandDefenceOffence",
 			techlevel = 2,
 			unitgroup = "weapon",
-			restrictions_inclusion = "_notacnukes_",
 			usebuildinggrounddecal = true,
 		},
 		featuredefs = {
@@ -136,11 +136,11 @@ return {
 				weaponvelocity = 1200,
 				customparams = {
 					cruise_and_verticalize = true,
-					uptime_max = 7,
-					shield_aoe_penetration = true,
-					water_splash_ceg = "splash-gigantic", -- 1 bigger than it would get
-					stockpilelimit = 10,
 					nuclear = 1,
+					shield_aoe_penetration = true,
+					stockpilelimit = 10,
+					uptime_max = 7,
+					water_splash_ceg = "splash-gigantic",
 				},
 				damage = {
 					commanders = 1000,

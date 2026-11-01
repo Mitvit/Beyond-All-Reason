@@ -5,7 +5,7 @@ return {
 		buildpic = "CORAAP.DDS",
 		buildtime = 92000,
 		canmove = true,
-		canReclaim = false,
+		canreclaim = false,
 		corpse = "DEAD",
 		energycost = 65000,
 		energystorage = 1400,

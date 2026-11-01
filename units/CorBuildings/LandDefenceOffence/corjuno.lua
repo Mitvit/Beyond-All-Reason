@@ -110,6 +110,7 @@ return {
 				explosiongenerator = "custom:juno-explo",
 				flighttime = 400,
 				impulsefactor = 0,
+				interceptedbyshieldtype = 0,
 				metalpershot = 200,
 				model = "epulse.s3o",
 				name = "Anti radar/minefield/jammer magnetic impulse rocket",
@@ -125,7 +126,6 @@ return {
 				soundstart = "junofir2",
 				stockpile = true,
 				stockpiletime = 75,
-				interceptedbyshieldtype = 0,
 				texture1 = "null",
 				texture2 = "smoketrailbar",
 				texture3 = "null",
@@ -137,11 +137,11 @@ return {
 				weaponvelocity = 500,
 				customparams = {
 					cruise_and_verticalize = true,
-					uptime_max = 9,
 					junotype = "base",
 					nofire = true,
 					shield_aoe_penetration = true,
 					stockpilelimit = 20,
+					uptime_max = 9,
 					water_splash = 0,
 				},
 				damage = {

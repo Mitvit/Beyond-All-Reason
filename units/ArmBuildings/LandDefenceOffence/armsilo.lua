@@ -165,11 +165,11 @@ return {
 				customparams = {
 					cruise_and_verticalize = true,
 					cruise_chase_factor = 0.5,
-					uptime_max = 12,
+					nuclear = 1,
 					place_target_on_ground = "true",
 					shield_aoe_penetration = true,
 					stockpilelimit = 10,
-					nuclear = 1,
+					uptime_max = 12,
 				},
 				damage = {
 					commanders = 2500,

@@ -4,7 +4,7 @@ return {
 		buildpic = "ARMAMSUB.DDS",
 		buildtime = 11100,
 		canmove = true,
-		canReclaim = false,
+		canreclaim = false,
 		collisionvolumeoffsets = "0 16 0",
 		collisionvolumescales = "96 42 96",
 		collisionvolumetype = "CylY",
@@ -44,9 +44,9 @@ return {
 			model_author = "FireStorm",
 			normaltex = "unittextures/Arm_normal.dds",
 			subfolder = "ArmBuildings/SeaFactories",
+			techlevel = 1.5,
 			unitgroup = "builder",
 			usebuildinggrounddecal = true,
-			techlevel = 1.5,
 		},
 		featuredefs = {
 			dead = {

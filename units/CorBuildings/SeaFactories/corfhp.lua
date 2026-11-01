@@ -4,7 +4,7 @@ return {
 		buildpic = "CORFHP.DDS",
 		buildtime = 8700,
 		canmove = true,
-		canReclaim = false,
+		canreclaim = false,
 		collisionvolumeoffsets = "0 5 0",
 		collisionvolumescales = "96 32 96",
 		collisionvolumetype = "Box",
@@ -42,8 +42,8 @@ return {
 			normaltex = "unittextures/cor_normal.dds",
 			quickstart_discountable = true,
 			subfolder = "CorBuildings/SeaFactories",
-			unitgroup = "builder",
 			techlevel = 1.5,
+			unitgroup = "builder",
 		},
 		featuredefs = {
 			dead = {

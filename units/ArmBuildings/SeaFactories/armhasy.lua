@@ -4,7 +4,7 @@ return {
 		buildpic = "ARMSHLTXUW.DDS",
 		buildtime = 85000,
 		canmove = true,
-		canReclaim = false,
+		canreclaim = false,
 		collisionvolumeoffsets = "0 0 0",
 		collisionvolumescales = "256 80 221",
 		collisionvolumetype = "Box",

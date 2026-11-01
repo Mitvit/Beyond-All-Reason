@@ -4,7 +4,7 @@ return {
 		buildpic = "ARMFHP.DDS",
 		buildtime = 8700,
 		canmove = true,
-		canReclaim = false,
+		canreclaim = false,
 		collisionvolumescales = "100 40 90",
 		collisionvolumetype = "Box",
 		corpse = "DEAD",
@@ -40,8 +40,8 @@ return {
 			normaltex = "unittextures/Arm_normal.dds",
 			quickstart_discountable = true,
 			subfolder = "ArmBuildings/SeaFactories",
-			unitgroup = "builder",
 			techlevel = 1.5,
+			unitgroup = "builder",
 		},
 		featuredefs = {
 			dead = {

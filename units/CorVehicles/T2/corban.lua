@@ -143,8 +143,8 @@ return {
 				weapontype = "MissileLauncher",
 				weaponvelocity = 720,
 				customparams = {
-					projectile_destruction_method = "descend",
 					overrange_distance = 920,
+					projectile_destruction_method = "descend",
 					turretspeedx = 125,
 					turretspeedy = 125,
 				},

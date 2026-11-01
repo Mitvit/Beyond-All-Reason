@@ -147,7 +147,7 @@ return {
 				explosiongenerator = "custom:genericshellexplosion-medium-aoe",
 				gravityaffected = "true",
 				hightrajectory = 1,
-				impulsefactor = 0.5,
+				impulsefactor = 1.4,
 				name = "Pop-up long-range heavy g2g plasma cannon",
 				noselfdamage = true,
 				predictboost = 0.2,

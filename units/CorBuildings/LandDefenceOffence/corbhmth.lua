@@ -96,12 +96,12 @@ return {
 		weapondefs = {
 			corbhmth_weapon = {
 				accuracy = 780,
-				areaofeffect = 192,
+				areaofeffect = 200,
 				avoidfeature = false,
 				cegtag = "arty-extraheavy",
 				craterboost = 0,
 				cratermult = 0,
-				edgeeffectiveness = 0.85,
+				edgeeffectiveness = 0.5,
 				energypershot = 150,
 				explosiongenerator = "custom:genericshellexplosion-large-bomb",
 				firestarter = 99,

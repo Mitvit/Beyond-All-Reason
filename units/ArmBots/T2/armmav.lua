@@ -108,7 +108,7 @@ return {
 				cratermult = 0,
 				cylindertargeting = 1,
 				edgeeffectiveness = 0.15,
-				explosiongenerator = "custom:genericshellexplosion-small",
+				explosiongenerator = "custom:genericshellexplosion-medium",
 				gravityaffected = "true",
 				impulsefactor = 1.1,
 				name = "Anti-swarm g2g gauss-impulse guns",

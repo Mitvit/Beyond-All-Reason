@@ -32,7 +32,7 @@ return {
 		seismicsignature = 0,
 		selfdestructas = "MINE_MEDIUM",
 		selfdestructcountdown = 0,
-		sightdistance = 83.2,
+		sightdistance = 83,
 		stealth = true,
 		customparams = {
 			cannot_capture_territory = true,

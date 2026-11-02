@@ -31,7 +31,7 @@ return {
 		seismicsignature = 0,
 		selfdestructas = "FMINE_HEAVY",
 		selfdestructcountdown = 0,
-		sightdistance = 71.5,
+		sightdistance = 71,
 		sonarstealth = true,
 		stealth = true,
 		waterline = 1,
